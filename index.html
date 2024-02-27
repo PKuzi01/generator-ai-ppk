@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <title>AI Superhero Backstory Generator</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <div class="cotainer">
+    <div class="container">
         <header class="header">
             <div>
                 <h1>Superhero Backstory Generator</h1>
@@ -25,16 +27,16 @@
         </header>
 
         <div class="form-container">
-            <form id="superhero-generator">
-                <input type="text" id="intructions" class="instructions" autofocus required placeholder="Enter the name of your chosen superhero" autocomplete="off">
+            <form id="backstory-generator">
+                <input type="text" id="instructions" class="instructions" autofocus required placeholder="Enter the name of your chosen superhero" autocomplete="off">
 
-                <input type="button" value="Generate" class="btn" id="submit-button">
+                <button class="btn" id="submit-button">Generate</button>
             </form>
 
             <div class="hint">i.e: Pandabubble, Longshot, Spicy Anxiety</div>
         </div>
 
-        <div class="poem" id="poem"></div>
+        <div class="backstory" id="backstory"></div>
     </div>
 
     <script src="src/script.js"></script>
