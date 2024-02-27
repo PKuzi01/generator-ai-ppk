@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AI Superhero Backstory Generator</title>
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
+    <div class="cotainer">
+        <header class="header">
+            <div>
+                <h1>Superhero Backstory Generator</h1>
+                <p>
+                    Coded by 
+                    <a href="#">Philisizwe Kuzwayo</a>,
+                    and hosted on 
+                    <a href="#">Github</a>.
+                </p>
+            </div>
+
+            <a href="#" target="_blank">
+                <img src="#" alt="#">
+            </a>
+        </header>
+
+        <div class="form-container">
+            <form id="superhero-generator">
+                <input type="text" id="intructions" class="instructions" autofocus required placeholder="Enter the name of your chosen superhero" autocomplete="off">
+
+                <input type="button" value="Generate" class="btn" id="submit-button">
+            </form>
+
+            <div class="hint">i.e: Pandabubble, Longshot, Spicy Anxiety</div>
+        </div>
+
+        <div class="poem" id="poem"></div>
+    </div>
+
     <script src="src/script.js"></script>
 </body>
 
