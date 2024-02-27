@@ -2,7 +2,7 @@ function showBackstory(response) {
     new Typewriter("#backstory", {
         strings: response.data.answer,
         autoStart: true,
-        delay: 1,
+        delay: 30,
         cursor: "",
     });
 
@@ -22,7 +22,7 @@ function showInitialBackstory() {
     new Typewriter("#backstory", {
         strings: backstory,
         autoStart: true,
-        delay: 1,
+        delay: 30,
         cursor: "",
     });
 }
@@ -31,7 +31,7 @@ function generate(event) {
     event.preventDefault();
     let apiKey = `9a96e3865c186c9fbo4aaef0cdb0e0dt`;
     let context =
-    `You are an avid and dedicated comic book writer who has written thousands of comic book characters and their intricate and compelling backstories. Your mission is to generate a short and succinct backstory based on the name you are given in basic HTML. Make sure to follow the user instructions. Do not include a title. Sign off with a friendly saying like "Hope you like it!" in a <strong> element. Make sure to add in related emojis in the backstory to make it more fun. Omit usuing onomatopoeia and make it easy for a 15 year old to read and understand. Use first place pronouns like you and your.`;
+    `You are an avid and dedicated comic book writer who has written thousands of comic book characters and their intricate and compelling backstories. Your mission is to generate a short and succinct backstory based on the name you are given in basic HTML. Make sure to follow the user instructions. Do not include a title. Make sure to add in related emojis in the backstory to make it more fun. Omit usuing onomatopoeia and make it easy for a 15 year old to read and understand. Avoid using gendered pronouns. Always capitalise the first letter of the name you're given. Try to use a friendly and excitable tone.`;
     let instructionsInput = document.querySelector("#instructions");
     let prompt = `User instruction: Create a superhero backstory based on the following name: ${instructionsInput.value}`;
     let apiURL = `https://api.shecodes.io/ai/v1/generate?context=${context}&prompt=${prompt}&key=${apiKey}`;
